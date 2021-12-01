@@ -1,0 +1,20 @@
+ALGORITHM sumCommonElements ;
+VAR
+    arr1 : ARRAY_OF INTEGER[];
+    arr2 : ARRAY_OF INTEGER[];
+       result, i, j, temp : INTEGER := 0;
+   
+BEGIN
+  read(arr1);
+  read(arr2);
+FOR i FROM 0 TO arr1.lenght-1 STEP step  DO
+    FOR j FROM 0 TO arr2.length-1 STEP step  DO
+        IF (arr1[i] = arr2[j]) THEN
+            temp := temp + (arr1[i] * 2);
+        END_IF
+       
+    END_FOR
+     result := result + temp ;
+END_FOR
+  write(result);
+END

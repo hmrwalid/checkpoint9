@@ -1,0 +1,31 @@
+ALGORITHM  sumElementsDistinc
+VAR
+     htab : HASH_TABLE<INTEGER,INTEGER>;
+     
+     set1 : ARRAY_OF INTEGER[];
+      set2 : ARRAY_OF INTEGER[];
+      i, j: INTEGER;
+      sum : INTEGER :=0;
+      count : INTEGER :=1
+BEGIN
+ read(set1, set2)
+   FOR i FROM set1.lenght -1 TO max STEP step  DO
+    htab.insert(set1[i], 1);
+    FOR j FROM 0 TO set2[j].lenght -1  STEP step  DO
+        IF (htab.lookup(set2[j] = true )) THEN
+            count = count + 1;
+            htab.insert(set1[i], count);
+        END_IF
+        IF (count = 1) THEN
+            sum = sum + set1[i];
+        END_IF
+    END_FOR
+   END_FOR
+   FOR j FROM 0 TO set2.lenght-1 STEP step  DO
+       IF (htab.lookup(set2[j]= false)) THEN
+           htab.insert(set2[j], count);
+       END_IF
+        sum= sum + set2[j];
+   END_FOR
+    write(sum);
+END
