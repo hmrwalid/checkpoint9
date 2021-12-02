@@ -11,7 +11,7 @@ BEGIN
 FOR i FROM 0 TO arr1.lenght-1 STEP step  DO
     FOR j FROM 0 TO arr2.length-1 STEP step  DO
            IF (arr1[i] <> arr2[j]) THEN
-            temp1 := temp1 + arr1[1]
+            temp1 :=  arr1[1]
         ELSE
             temp1 := 0;
         END_IF
@@ -23,7 +23,7 @@ END_FOR
 FOR j FROM 0 TO arr2.lenght -1 step  STEP
 FOR i FROM 0 TO arr1.lenght-1 STEP step  DO
     IF (arr1[i] <> arr2[j]) THEN
-        temp2 := temp2 + arr2[j];
+        temp2 :=  + arr2[j];
         ELSE
         temp2 := 0;
     END_IF

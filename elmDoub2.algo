@@ -16,7 +16,7 @@ BEGIN
             count = count + 1;
             htab.insert(set1[i], count);
         END_IF
-        IF (count = 2) THEN
+        IF (count <> 2) THEN
             sum = sum + (set1[i] * 2);
         END_IF
     END_FOR
